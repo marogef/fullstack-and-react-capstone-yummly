@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Find Your Recipe</title>
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+	<link href="css/reset.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="background-image"></div>
+	<div id="wrapper">
+		<header class="heading">
+			<section class="favorites-container">
+				<div class="delete-favorites">
+					<button class="delete-favorites">
+                    <img src="assets/images/delete-favorites.png">
+                </button>
+				</div>
+				<h2>Your Favorites</h2>
+				<ul>
+
+				</ul>
+			</section>
+			<h1>Yummyly favorite food search</h1>
+			<p>Here you can search for all your favorite food. Let us give you directions and you will enjoy your food even better. Be prepared for a great tasting food with our recipes.</p>
+		</header>
+
+		<section class="input-section">
+			<input id="ingredient" type="text" placeholder="Search for a recipe..." value="">
+			<select name="cuisines" id="cuisine-name">
+				<option disabled value="choose cuisine">Please choose a Cuisine</option>
+				<option value="american">American</option>
+				<option value="italian" selected >Italian</option>
+				<option value="asian">Asian</option>
+				<option value="mexican">Mexican</option>
+				<option value="southern">Southern & Soul Food</option>
+				<option value="french">French</option>
+				<option value="southwestern">Southwestern</option>
+				<option value="barbecue">Barbecue</option>
+				<option value="indian">Indian</option>
+				<option value="chinese">Chinese</option>
+				<option value="cajun">Cajun & Creole</option>
+				<option value="english">English</option>
+				<option value="mediterranean">Mediterranean</option>
+				<option value="greek">Greek</option>
+				<option value="spanish">Spanish</option>
+				<option value="german">German</option>
+				<option value="thai">Thai</option>
+				<option value="moroccan">Moroccan</option>
+				<option value="irish">Irish</option>
+				<option value="japanese">Japanese</option>
+				<option value="cuban">Cuban</option>
+				<option value="hawaiin">Hawaiin</option>
+				<option value="swedish">Swedish</option>
+				<option value="hungarian">Hungarian</option>
+				<option value="portugese">Portugese</option>
+			</select>
+			<button id="searchButton" class="search">Search</button>
+		</section>
+
+		<section class="recipe-list">
+			<ul class="recipe-details">
+				<!--<li>-->
+				<!--	<div class="recipe-image">-->
+				<!--		<img src="assets/images/default_recipe_image.jpg" alt="Recipe image" width="170">-->
+				<!--	</div>-->
+				<!--	<div class="recipe-description">-->
+				<!--		<p>Some great recipe name</p>-->
+				<!--		<p><a target="_blank" href=https://www.yummly.com/recipe/></a>-->
+				<!--		</p>-->
+				<!--		<p>Cooking time: 90 minutes</p>-->
+				<!--		<p>Rating: 4.5</p>-->
+				<!--	</div>-->
+				<!--</li>-->
+				<!--<li>-->
+				<!--	<div class="recipe-image">-->
+				<!--		<img src="assets/images/default_recipe_image.jpg" alt="Recipe image" width="170">-->
+				<!--	</div>-->
+				<!--	<div class="recipe-description">-->
+				<!--		<p>Some great recipe name</p>-->
+				<!--		<p><a target="_blank" href=https://www.yummly.com/recipe/></a>-->
+				<!--		</p>-->
+				<!--		<p>Cooking time: 90 minutes</p>-->
+				<!--		<p>Rating: 4.5</p>-->
+				<!--	</div>-->
+				<!--</li>-->
+				<!--<li>-->
+				<!--	<div class="recipe-image">-->
+				<!--		<img src="assets/images/default_recipe_image.jpg" alt="Recipe image" width="170">-->
+				<!--	</div>-->
+				<!--	<div class="recipe-description">-->
+				<!--		<p>Some great recipe name</p>-->
+				<!--		<p><a target="_blank" href=https://www.yummly.com/recipe/></a>-->
+				<!--		</p>-->
+				<!--		<p>Cooking time: 90 minutes</p>-->
+				<!--		<p>Rating: 4.5</p>-->
+				<!--	</div>-->
+				<!--</li>-->
+				<!--<li>-->
+				<!--	<div class="recipe-image">-->
+				<!--		<img src="assets/images/default_recipe_image.jpg" alt="Recipe image" width="170">-->
+				<!--	</div>-->
+				<!--	<div class="recipe-description">-->
+				<!--		<p>Some great recipe name</p>-->
+				<!--		<p><a target="_blank" href=https://www.yummly.com/recipe/></a>-->
+				<!--		</p>-->
+				<!--		<p>Cooking time: 90 minutes</p>-->
+				<!--		<p>Rating: 4.5</p>-->
+				<!--	</div>-->
+				<!--</li>-->
+			</ul>
+			<p>There are more recipes out there but our recipes are good tasting and you will enjoy every one of them.</p>
+		</section>
+
+	</div>
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script src="client.js"></script>
+	<!--<script src="react-capstone-recipe-finder.1.0.0.js"></script>-->
+</body>
+
+</html>
