@@ -120,17 +120,14 @@ function addFavoriteRecipe(favoriteRecipeName) {
         .done(function(recipe) {
             getFavoriteRecipes();
         })
-        // .fail(function(jqXHR, error, errorThrown) {
-        //     console.log(jqXHR);
-        //     console.log(error);
-        //     console.log(errorThrown);
-        // });
+ 
                 .fail(ifResultsFail);
 
 }
 
 //function to delete favorites
 function deleteFavorites() {
+    console.log("inside delete favorites");
     $.ajax({
             method: 'DELETE',
             dataType: 'json',
@@ -139,11 +136,7 @@ function deleteFavorites() {
         .done(function(recipe) {
             getFavoriteRecipes();
         })
-        // .fail(function(jqXHR, error, errorThrown) {
-        //     console.log(jqXHR);
-        //     console.log(error);
-        //     console.log(errorThrown);
-        // });
+
         
                 .fail(ifResultsFail);
 
@@ -169,12 +162,7 @@ function getFavoriteRecipes() {
             $(".favorites-container ul").html(buildTheHtmlOutput);
 
         })
-        // .fail(function(jqXHR, error, errorThrown) {
-        //     console.log(jqXHR);
-        //     console.log(error);
-        //     console.log(errorThrown);
-        // });
-        
+ 
                 .fail(ifResultsFail);
 }
 
@@ -183,23 +171,7 @@ function getFavoriteRecipes() {
 
 
 
-//function to get the shorten the output
-// function sanitizeJSON(unsanitized) {
-//     var str = JSON.stringify(unsanitized);
-//     var output = str
-//         .replace(/\\/g, "-")
-//         .replace(/\//g, "-")
-//         .replace(/\n/g, "")
-//         .replace(/\r/g, "")
-//         .replace(/\t/g, "")
-//         .replace(/\f/g, "")
-//         .replace(/"/g, "")
-//         .replace(/'/g, "")
-//         .replace(/\®/g, "")
-//         .replace(/\&/g, "");
-//     return output;
-// }
-//changed this
+
 //function for showing results
 function resultsIntoListItem(output, recipe) {
     var isSale;
@@ -236,7 +208,6 @@ function resultsIntoListItem(output, recipe) {
     return output;
 }
 
-//changed this
 //function to display results of list items
 function resultsIntoListItem(output, recipe) {
     var isSale;
