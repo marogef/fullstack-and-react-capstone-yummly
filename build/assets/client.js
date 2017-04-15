@@ -131,7 +131,6 @@ function addFavoriteRecipe(favoriteRecipeName) {
 
 //function to delete favorites
 function deleteFavorites() {
-    console.log("inside delete favorites");
     $.ajax({
             method: 'DELETE',
             dataType: 'json',
