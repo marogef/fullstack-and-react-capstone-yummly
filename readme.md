@@ -1,4 +1,5 @@
 Summary:
+
 Use Yummly.com to do your search for food
 Go ahead and type it.  Your favorite food is here and all you have to do is search.  You will get really good tasting food if you follow this awesome plan from Yummly Here you can search for all your favorite food. Let his app give you directions and you will never regret it.
 
