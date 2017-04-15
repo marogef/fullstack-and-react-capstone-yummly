@@ -1,20 +1,19 @@
 html {
 	box-sizing: border-box;
-	background: url("../assets/images/background.jpg") no-repeat center center fixed; 
+	background: url("../assets/images/Recipes-Hero.jpg") no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
-
+button{
+	background-color: transparent;
+}
 body {
 	font-family: 'Josefin Sans', sans-serif;
 	margin: 0 auto;
 	text-align: center;
 }
-
-
-
 
 /* Setting the transparent background to the wrapper */
 
@@ -31,7 +30,7 @@ body {
 	font-size: 4rem;
 	font-weight: bolder;
 	letter-spacing: 0.15rem;
-	color: #FA5858;
+	color: ghostwhite;
 	padding-top: 5rem;
 	padding-bottom: 1.5rem;
 }
@@ -51,6 +50,54 @@ body {
 }
 
 
+.heading .favorites-container {
+    background-image: url("../assets/images/transparent.jpg");
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 20%;
+    color: white;
+    /* text-align: left; */
+    font-size: 10px;
+    z-index: 1000;
+    border: 2px gray solid;
+    border-radius: 7px;
+    padding: 10px;
+    text-align: center;
+    max-height: 150px;
+    min-width: 150px;
+    overflow-y: auto;
+}
+.heading .favorites-container ul {
+    list-style-type: decimal;
+    text-align: left;
+    margin: 0 15px;
+}
+.heading .favorites-container ul li{
+    margin-top: 10px;
+}
+
+.heading .favorites-container .delete-favorites {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+.heading .favorites-container .delete-favorites button{
+     padding:0; 
+     border: 0; 
+     margin: 0;
+     width: 14px;
+     height: 14px;
+}
+.heading .favorites-container .delete-favorites img{
+    max-width: 100%;
+    height: auto;
+     padding:0; 
+     margin: 0; 
+}
 
 
 /* Input section CSS */
@@ -82,7 +129,7 @@ body {
 	font-family: 'Josefin Sans', sans-serif;
 	height: 1.5rem;
 	width: 40%;
-	color: #FF4000;
+	color: #A8E86E;
 	letter-spacing: 0.02rem;
 	padding: 0.5%;
 	margin-right: 1.5%;	
@@ -98,7 +145,7 @@ body {
 	font-family: 'Josefin Sans', sans-serif;
 	height: 1.5rem;
 	width: 19%;
-	color: #FF4000;
+	color: #A8E86E;
 	background-color: #F6E3CE;
 	letter-spacing: 0.02rem;
 	padding: 0.6%;
@@ -117,10 +164,6 @@ body {
 .input-section .search:hover {
 	cursor: pointer;
 }
-
-
-
-
 /* Recipe List CSS */
 
 .recipe-list {
@@ -139,6 +182,29 @@ body {
 	margin-right: 2%;
 	margin-bottom: 2rem;
 	min-height: 20rem;
+	position: relative;
+}
+
+
+.recipe-details li .add-product-to-favorites {
+    position: absolute;
+    top: 0;
+    left: 0;
+        margin-top: 3px;
+    margin-left: 3px;
+}
+
+.recipe-details li .add-product-to-favorites button{
+     padding:0; 
+     border: 0; 
+     margin: 0; 
+}
+.recipe-details li .add-product-to-favorites img{
+    max-width: 100%;
+    width: 20px;
+    height: auto;
+     padding:0; 
+     margin: 0; 
 }
 
 .recipe-details .recipe-image {

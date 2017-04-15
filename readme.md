@@ -1,4 +1,4 @@
-# node-capstone-recipe-search
+# fullstack-and-react-capstone-yummly
 
 Summary
 Use this application to search for good recipes.  It uses the Yummyly API in order to make the search. 

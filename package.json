@@ -35,7 +35,7 @@
     "build:assets": "run-s clean:assets mkdir:assets _build:assets",
     "_build:assets": "cpr assets build/assets",
     "watch:assets": "run-s build:assets _watch:assets",
-    "_watch:assets": "chokidar assets/**/* -c \"npm run build:assets\""
+"_watch:assets": "chokidar assets/**/* -c \"npm run build:assets\""
   },
   "repository": {
     "type": "git",
@@ -53,12 +53,12 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
-    "babel-cli": "^6.18.0",
+    "babel-cli": "^6.11.4",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-polyfill": "^6.13.0",
     "babel-preset-es2015": "^6.13.1",
-    "babel-preset-react": "^6.16.0",
+"babel-preset-react": "^6.16.0",
     "bcrypt": "^1.0.2",
     "bcryptjs": "^2.4.0",
     "bestbuy": "^1.0.1",

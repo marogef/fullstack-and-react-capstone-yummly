@@ -18,7 +18,7 @@ var app = express();
 
 // serves static files and uses json bodyparser
 app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(express.static('build'));
 
 app.use(bodyParser.urlencoded({
     extended: true
