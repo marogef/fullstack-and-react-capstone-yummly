@@ -89,7 +89,6 @@ $(document).on('click', ".favorites", function(key) {
 $(document).on('click', ".delete-favorites", function(key) {
     deleteFavorites();
 });
-//&moved location to here
 //function to get results from api
 function getResults(query) {
     //console.log(query);
@@ -120,7 +119,7 @@ function addFavoriteRecipe(favoriteRecipeName) {
         .done(function(recipe) {
             getFavoriteRecipes();
         })
- 
+
                 .fail(ifResultsFail);
 
 }
@@ -137,7 +136,6 @@ function deleteFavorites() {
             getFavoriteRecipes();
         })
 
-        
                 .fail(ifResultsFail);
 
 }
@@ -162,11 +160,9 @@ function getFavoriteRecipes() {
             $(".favorites-container ul").html(buildTheHtmlOutput);
 
         })
- 
+
                 .fail(ifResultsFail);
 }
-
-
 
 
 
@@ -208,6 +204,7 @@ function resultsIntoListItem(output, recipe) {
     return output;
 }
 
+//changed this
 //function to display results of list items
 function resultsIntoListItem(output, recipe) {
     var isSale;

@@ -74,8 +74,6 @@ var getRecipes = function (keyword, cuisine, args) {
 
 //api call between the view and the controller
 app.get('/recipe/:keyword/:cuisine', function(request, response) {
-    //console.log(request.params.recipe_name);
-    
     //request.params.cuisine = "Italian";
     if (request.params.keyword == "") {
         response.json("Specify a keyword");
