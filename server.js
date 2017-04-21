@@ -52,7 +52,7 @@ if (require.main === module) {
 //external api call function
 var getRecipes = function (keyword, cuisine, args) {
     var emitter = new events.EventEmitter();
-    unirest.get("http://api.yummly.com/v1/api/recipes?_app_id=6d9e22ab&_app_key=e4270a20949b90bf9cca1017d935f12b&q=" + keyword + "&allowedCuisine[]=cuisine^cuisine-" + cuisine + "&requirePictures=true")
+    unirest.get("https://api.yummly.com/v1/api/recipes?_app_id=6d9e22ab&_app_key=e4270a20949b90bf9cca1017d935f12b&q=" + keyword + "&allowedCuisine[]=cuisine^cuisine-" + cuisine + "&requirePictures=true")
         .qs(args)
         //after api call we get the response inside the "response" parameter
         .end(function (response) {
