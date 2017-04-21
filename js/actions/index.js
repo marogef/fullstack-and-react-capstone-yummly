@@ -1,5 +1,5 @@
 require('isomorphic-fetch');
-
+//make the right repository
 var ADD_REPOSITORY = 'ADD_REPOSITORY';
 var addRepository = function(repository) {
     return {
@@ -7,7 +7,7 @@ var addRepository = function(repository) {
         repository: repository
     }
 };
-
+//declare varaible and return for rate repository
 var RATE_REPOSITORY = 'RATE_REPOSITORY';
 var rateRepository = function(repository, rating) {
     return {
@@ -16,7 +16,7 @@ var rateRepository = function(repository, rating) {
         rating: rating
     };
 };
-
+//declare fetch description and return the appropriate status
 var fetchDescription = function(repository) {
     return function(dispatch) {
         var url = 'https://api.github.com/repos/' + repository;
@@ -46,7 +46,7 @@ var fetchDescription = function(repository) {
     }
 };
 
-
+//add code for the fetch description 
 var FETCH_DESCRIPTION_SUCCESS = 'FETCH_DESCRIPTION_SUCCESS';
 var fetchDescriptionSuccess = function(repository, description) {
     return {
@@ -55,7 +55,7 @@ var fetchDescriptionSuccess = function(repository, description) {
         description: description
     };
 };
-
+//declare fetch error and return the statement
 var FETCH_DESCRIPTION_ERROR= 'FETCH_DESCRIPTION_ERROR';
 var fetchDescriptionError = function(repository, error) {
     return {
@@ -64,7 +64,7 @@ var fetchDescriptionError = function(repository, error) {
         error: error
     };
 };
-
+//export the right repositories
 exports.ADD_REPOSITORY = ADD_REPOSITORY;
 exports.addRepository = addRepository;
 exports.RATE_REPOSITORY = RATE_REPOSITORY;

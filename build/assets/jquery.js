@@ -1,3 +1,4 @@
+//make the document ready
 $(document).ready( function() {
 	$('#searchButton').on('click', function (event) {
 	    event.preventDefault();
@@ -6,7 +7,7 @@ $(document).ready( function() {
 	    recipeValidation(keyword,cuisine);
 	});
 });
-
+//validate function for recipe
 var recipeValidation = function(keyword,cuisine) {
 	if ((keyword == '') && (cuisine == null)) {
 	   	alert('Please enter something in the text box and try again!');
@@ -25,7 +26,6 @@ var showError = function(error){
 }
 
 // takes a string of semi-colon separated tags to be searched
-// for on StackOverflow
 var getRecipe = function(keyword,cuisine) {
 	
 	var result = $.ajax({
@@ -45,6 +45,7 @@ var getRecipe = function(keyword,cuisine) {
 			$('.recipe-details').append(recipe);
 		});
 	})
+	//make the case for fail function
 	.fail(function(jqXHR, error, errorThrown){
 		var errorElem = showError(error);
 		$('.search-results').append(errorElem);

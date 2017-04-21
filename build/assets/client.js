@@ -3,7 +3,7 @@ $(document).ready(function() {
     $(".search-results").hide();
     getFavoriteRecipes();
 });
-
+//fuction for search button
 $('#searchButton').on('click', function(event) {
     event.preventDefault();
 
@@ -32,7 +32,7 @@ $(document).on('keypress', function(key) {
         getRecipesFromBackend(keyword, cuisine);
     }
 });
-
+//fuction for getting recipes
 function getRecipesFromBackend(keyword, cuisine) {
 
     $.ajax({
@@ -69,14 +69,13 @@ function getRecipesFromBackend(keyword, cuisine) {
 
 
         })
+        //fail function
         .fail(function(jqXHR, error, errorThrown) {
             console.log(jqXHR);
             console.log(error);
             console.log(errorThrown);
         });
 }
-
-
 
 //clicking the favorites to add the recipe 
 $(document).on('click', ".favorites", function(key) {
@@ -164,10 +163,6 @@ function getFavoriteRecipes() {
                 .fail(ifResultsFail);
 }
 
-
-
-
-
 //function for showing results
 function resultsIntoListItem(output, recipe) {
     var isSale;
@@ -203,8 +198,6 @@ function resultsIntoListItem(output, recipe) {
     output += '</li>';
     return output;
 }
-
-//changed this
 //function to display results of list items
 function resultsIntoListItem(output, recipe) {
     var isSale;
@@ -251,7 +244,7 @@ function resultsIntoListItem(output, recipe) {
     output += '</li>';
     return output;
 }
-// //function in case if results fail
+//function in case if results fail
 function ifResultsFail(jqXHR, error, errorThrown) {
     console.log(jqXHR);
     console.log(error);

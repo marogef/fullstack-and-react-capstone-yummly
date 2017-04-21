@@ -1,9 +1,8 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-
+//declare the favorites function
 var Favorites = function() {
-    
     return (
     	<section className="favorites-container">
 				<div className="delete-favorites">

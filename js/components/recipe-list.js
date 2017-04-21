@@ -1,7 +1,7 @@
-
+//add the react and react dom requirments
 var React = require('react');
 var ReactDOM = require('react-dom');
-
+//declar function for recipelist and return the right output
 var recipeList = function() {
     
     return (

@@ -4,27 +4,27 @@ var chai = require('chai');
 var chaiHttp = require('chai-http');
 
 var server = require('../server.js');
-var Item = require('../models/product');
+var Item = require('../models/recipe');
 
 var should = chai.should();
 var app = server.app;
 
 chai.use(chaiHttp);
-
-describe('BestBuy', function() {
+//for describe yummly function
+describe('Yummly', function() {
     before(function(done) {
         server.runServer(function() {
-            Item.create({name: 'product'}, 
+            Item.create({name: 'recipe'}, 
             function() {
                 done();
             });
         });
     });
-   
-   describe('BestBuy', function() {
-    it('should product on GET', function(done) {
+   //for get recipe
+   describe('Yummly', function() {
+    it('should recipe on GET', function(done) {
         chai.request(app)
-            .get('/product')
+            .get('/recipe')
             .end(function(err, res) {
                 should.equal(err, null);
                 res.should.have.status(200);
@@ -42,11 +42,11 @@ describe('BestBuy', function() {
                 done();
             });
     });
-
-    it('should add an product POST', function(done) {
+//for post function
+    it('should add an recipe POST', function(done) {
         chai.request(app)
-            .post('/product')
-            .send({'name': 'product'})
+            .post('/recipe')
+            .send({'name': 'recipe'})
             .end(function(err, res) {
                 should.equal(err, null);
                 res.should.have.status(201);
@@ -56,15 +56,15 @@ describe('BestBuy', function() {
                 res.body.should.have.property('_id');
                 res.body.name.should.be.a('string');
                 res.body._id.should.be.a('string');
-                res.body.name.should.equal('product');
+                res.body.name.should.equal('recipe');
                 done();
             });
     });
-
-    it('should a product on PUT', function(done) {
+//for put function
+    it('should a recipe on PUT', function(done) {
         chai.request(app)
-            .put('/product/3')
-            .send({'id': 3, 'name': 'product'})
+            .put('/recipe/3')
+            .send({'id': 3, 'name': 'recipe'})
             .end(function(err, res) {
                 should.equal(err, null);
                 res.should.have.status(201);
@@ -72,10 +72,10 @@ describe('BestBuy', function() {
                 done();
             });
     });
-
-    it('should delete a product DELETE', function(done) {
+//for delete function
+    it('should delete a recipe DELETE', function(done) {
         chai.request(app)
-            .delete('/product/3')
+            .delete('/recipe/3')
             .end(function(err, res){
                 //should.equal(err, null);
                 res.should.have.status(404);

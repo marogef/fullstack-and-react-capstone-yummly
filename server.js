@@ -39,7 +39,7 @@ var runServer = function(callback) {
         });
     });
 };
-
+//in case if require main 
 if (require.main === module) {
     runServer(function(err) {
         if (err) {
@@ -100,7 +100,7 @@ app.get('/recipe/:keyword/:cuisine', function(request, response) {
         });
     }
 });
-
+//make the post call
 app.post('/favorite-recipes', function(req, res) {
     Recipe.create({
         name: req.body.recipeName
@@ -113,6 +113,7 @@ app.post('/favorite-recipes', function(req, res) {
         res.status(201).json(recipes);
     });
 });
+//make the get call
 app.get('/favorite-recipes', function(req, res) {
     Recipe.find(function(err, recipes) {
         if (err) {
@@ -123,7 +124,7 @@ app.get('/favorite-recipes', function(req, res) {
         res.status(200).json(recipes);
     });
 });
-
+//make the delete call
 app.delete('/delete-favorites', function (req, res) {
     Recipe.remove(req.params.id, function (err, items) {
         if (err)
