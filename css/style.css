@@ -109,11 +109,11 @@ body {
 }
 
 .input-section #ingredient {
-	font-size: 1.25rem;
+	font-size: 1.00rem;
 	font-family: 'Josefin Sans', sans-serif;
-	height: 1rem;
+	height: 2.2rem;
 	width: 30%;
-	color: #FF4000;
+	color: black;
 	letter-spacing: 0.02rem;
 	padding: 0.5%;
 	margin-right: 1.5%;	
@@ -125,9 +125,9 @@ body {
 }
 
 .input-section select {
-	font-size: 1.25rem;
+	font-size: 1.00rem;
 	font-family: 'Josefin Sans', sans-serif;
-	height: 1.5rem;
+	height: 2.2rem;
 	width: 40%;
 	color: #A8E86E;
 	letter-spacing: 0.02rem;
@@ -138,6 +138,8 @@ body {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+	background-image: url("../assets/images/carrot.png");
+
 }
 
 .input-section .search {

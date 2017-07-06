@@ -15,7 +15,6 @@ var unirest = require('unirest');
 
 /* STEP 2 - initialize the app*/
 var app = express();
-
 // serves static files and uses json bodyparser
 app.use(bodyParser.json());
 app.use(express.static('build'));
