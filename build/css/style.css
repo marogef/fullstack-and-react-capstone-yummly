@@ -109,11 +109,11 @@ body {
 }
 
 .input-section #ingredient {
-	font-size: 1.25rem;
+	font-size: 1.00rem;
 	font-family: 'Josefin Sans', sans-serif;
-	height: 1rem;
+	height: .9rem;
 	width: 30%;
-	color: #FF4000;
+	color: black;
 	letter-spacing: 0.02rem;
 	padding: 0.5%;
 	margin-right: 1.5%;	
@@ -125,7 +125,7 @@ body {
 }
 
 .input-section select {
-	font-size: 1.25rem;
+	font-size: 1.00rem;
 	font-family: 'Josefin Sans', sans-serif;
 	height: 1.5rem;
 	width: 40%;
@@ -134,21 +134,28 @@ body {
 	padding: 0.5%;
 	margin-right: 1.5%;	
 	border: 0;
-	border-radius: 0.25rem;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+    background-image: url("../assets/images/carrot.png");
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 0.25rem;
+
+
 }
 
 .input-section .search {
-	font-size: 1.25rem;
+	font-size: 1.00rem;
 	font-family: 'Josefin Sans', sans-serif;
 	height: 1.5rem;
+	font-weight: bold;
 	width: 19%;
 	color: #A8E86E;
 	background-color: #F6E3CE;
 	letter-spacing: 0.02rem;
-	padding: 0.6%;
+	padding: 0.5%;
 	border: none;
 	border-radius: 0.25rem;
 }
@@ -170,6 +177,7 @@ body {
 	text-align: center;
 	color: #fff;
 	padding: 4rem 0;
+
 }
 
 .recipe-details li {
@@ -184,7 +192,6 @@ body {
 	min-height: 20rem;
 	position: relative;
 }
-
 
 .recipe-details li .add-product-to-favorites {
     position: absolute;
@@ -208,19 +215,27 @@ body {
 }
 
 .recipe-details .recipe-image {
-	float: left;
-	width: 40%;
-	display: inline-block;
-	margin: 3rem 0;
-	border-right: 1px solid #F6CECE;
+ 	margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    
+
 }
 
 .recipe-details .recipe-description {
-	float: left;
-	width: 59%;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 59%;
 	display: inline-block;
-	margin: 3rem 0;
+	/*margin: 3rem 0;*/
 	color: #F6E3CE;
+	
+}
+.recipe-details:hover .recipe-description:hover {
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .recipe-details p {
@@ -231,7 +246,7 @@ body {
 .recipe-details a {
 	font-size: 1.5rem;
 	text-decoration: none;
-	color: #FA5858;
+	color: cyan;
 	font-weight: 700;
 	letter-spacing: 0.1rem;
 }
@@ -276,11 +291,24 @@ body {
 	}
 
 	.recipe-details .recipe-image {
-		float: none;
-		width: 99%;
-		display: block;
-		margin: 0.75rem auto;
-		border-right: none;
+		
+		margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+
+		/*float: none;*/
+		/*width: 40%;*/
+		/*display: block;*/
+		/*margin: 0.75rem auto;*/
+		/*border-right: none;*/
+		/*position: absolute;*/
+  /*  	top: 0;*/
+  /*  	right: 0;*/
+  /* 	    bottom: auto;*/
+  /* 	    left: auto;*/
+  /*      height: 100%;*/
+  /*      z-index: 5;*/
+
 	}
 
 	.recipe-details .recipe-description {

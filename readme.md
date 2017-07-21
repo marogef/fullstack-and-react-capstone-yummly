@@ -19,7 +19,7 @@ When you want to delete your results everything can be removed from the list wit
 
 ## API: Yummly REST API was used in this app.
 
-## Title: Yummyly favorite food search.
+## Title: Yummly favorite food search.
 
 ## Methods: GET, POST, PUT, DELETE.
 

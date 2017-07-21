@@ -9,7 +9,7 @@ $('#searchButton').on('click', function(event) {
 
     var keyword = $('#ingredient').val();
     if (keyword == "") {
-        console.log("Please enter a keyword");
+        console.log("Search for recipe");
     }
     var cuisine = $('#cuisine-name').val();
     if (cuisine == "") {

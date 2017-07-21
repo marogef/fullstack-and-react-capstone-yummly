@@ -2,7 +2,6 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 //make the function for header and return the right statement
 var Header = function() {
-    
     return (
     	<div>
     		<h1>Yummly favorite food search</h1>

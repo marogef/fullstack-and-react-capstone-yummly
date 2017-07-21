@@ -31863,7 +31863,7 @@
 	        React.createElement(
 	            'h1',
 	            null,
-	            'Yummyly favorite food search'
+	            'Yummly favorite food search'
 	        ),
 	        React.createElement(
 	            'p',
