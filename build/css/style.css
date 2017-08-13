@@ -350,6 +350,8 @@ body {
     background-repeat: no-repeat;
     background-position: right;
     border-radius: 0.25rem;
+    background-color: white;
+
 }
 .input-section #ingredient{
 	width: 39%;
@@ -415,6 +417,8 @@ body {
     background-repeat: no-repeat;
     background-position: right;
     border-radius: 0.25rem;
+    background-color: white;
+
 }
 .input-section #ingredient{
 	width: 39%;
@@ -453,6 +457,7 @@ body {
     background-repeat: no-repeat;
     background-position: right;
     border-radius: 0.25rem;
+    background-color: white;
 }
 .input-section #ingredient{
 	width: 39%;
