@@ -355,6 +355,8 @@ body {
 }
 .input-section #ingredient{
 	width: 39%;
+	height: 19px;
+
 }
 	.recipe-details .recipe-description {
 		float: none;
@@ -367,6 +369,7 @@ body {
 @media only screen and (max-width: 480px) {
 	#wrapper {
 		width: 95%;
+		
 	}
 
 	.input-section {
@@ -389,6 +392,8 @@ body {
 
 	.input-section #ingredient {
 		margin-right: 2%;
+		height: 19px;
+
 	}
 
 	.input-section .search {
@@ -422,6 +427,8 @@ body {
 }
 .input-section #ingredient{
 	width: 39%;
+	height: 19px;
+
 }
 }
 
@@ -461,5 +468,6 @@ body {
 }
 .input-section #ingredient{
 	width: 39%;
+	height: 19px;
 }
 }
