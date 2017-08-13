@@ -275,6 +275,28 @@ body {
 		margin: 2rem auto;
 		width: 70%;
 	}
+	.input-section select {
+    font-size: 1.00rem;
+    font-family: 'Josefin Sans', sans-serif;
+    height: 1.5rem;
+    width: 54%;
+    color: #A8E86E;
+    letter-spacing: 0.02rem;
+    padding: 0.5%;
+    margin-right: 1.5%;
+    /* border: 0; */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(../assets/images/carrot.png);
+    background-size: 50px 49px;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 0.25rem;
+}
+.input-section #ingredient{
+	width: 39%;
+}
 }
 
 @media only screen and (max-width: 768px) {
@@ -310,7 +332,28 @@ body {
   /*      z-index: 5;*/
 
 	}
-
+.input-section select {
+    font-size: 1.00rem;
+    font-family: 'Josefin Sans', sans-serif;
+    height: 1.5rem;
+    width: 54%;
+    color: #A8E86E;
+    letter-spacing: 0.02rem;
+    padding: 0.5%;
+    margin-right: 1.5%;
+    /* border: 0; */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(../assets/images/carrot.png);
+    background-size: 50px 49px;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 0.25rem;
+}
+.input-section #ingredient{
+	width: 39%;
+}
 	.recipe-details .recipe-description {
 		float: none;
 		width: 99%;
@@ -354,6 +397,28 @@ body {
 	.recipe-details li {
 		width: 80%;
 	}
+	.input-section select {
+    font-size: 1.00rem;
+    font-family: 'Josefin Sans', sans-serif;
+    height: 1.5rem;
+    width: 54%;
+    color: #A8E86E;
+    letter-spacing: 0.02rem;
+    padding: 0.5%;
+    margin-right: 1.5%;
+    /* border: 0; */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(../assets/images/carrot.png);
+    background-size: 50px 49px;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 0.25rem;
+}
+.input-section #ingredient{
+	width: 39%;
+}
 }
 
 @media only screen and (max-width: 320px) {
@@ -370,4 +435,26 @@ body {
 	.recipe-details li {
 		width: 90%;
 	}
+	.input-section select {
+    font-size: 1.00rem;
+    font-family: 'Josefin Sans', sans-serif;
+    height: 1.5rem;
+    width: 54%;
+    color: #A8E86E;
+    letter-spacing: 0.02rem;
+    padding: 0.5%;
+    margin-right: 1.5%;
+    /* border: 0; */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(../assets/images/carrot.png);
+    background-size: 50px 49px;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 0.25rem;
+}
+.input-section #ingredient{
+	width: 39%;
+}
 }
