@@ -191,6 +191,13 @@ body {
 	margin-bottom: 2rem;
 	min-height: 20rem;
 	position: relative;
+ 
+	
+}
+.recipe-details li:hover{
+	-moz-box-shadow: 0 0 10px black;
+	-webkit-box-shadow: 0 0 10px ghostwhite;
+	box-shadow: 0 0 10px ghostwhite;
 }
 
 .recipe-details li .add-product-to-favorites {
@@ -214,6 +221,7 @@ body {
      margin: 0; 
 }
 
+
 .recipe-details .recipe-image {
  	margin-left: auto;
     margin-right: auto;
@@ -233,9 +241,9 @@ body {
 	
 }
 .recipe-details:hover .recipe-description:hover {
-	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
-	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
-	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 0 10px gray;
+	-webkit-box-shadow: 0 0 10px gray;
+	box-shadow: 0 0 10px gray;
 }
 
 .recipe-details p {
@@ -403,6 +411,7 @@ body {
 
 	.recipe-details li {
 		width: 80%;
+ 	
 	}
 	.input-section select {
     font-size: 1.00rem;

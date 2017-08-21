@@ -51,8 +51,10 @@ function getRecipesFromBackend(keyword, cuisine) {
                 var output = '';
                 output = '<li>';
                 output += '<div class="add-product-to-favorites">';
+
                 output += '<input type="hidden" value="' + matches.sourceDisplayName + '">';
                 output += '<button class="favorites"><img src="assets/images/add-to-favorites.png"></button>';
+                output += '<button class=""><img src="assets/images/yummly.png"></button>';
                 output += '</div>';
                 output += '<div class="recipe-image">';
                 output += '<img src="' + recipeURL + '" alt="Recipe image" width="170">';
