@@ -185,7 +185,16 @@ body {
 	margin-bottom: 2rem;
 	min-height: 20rem;
 	position: relative;
+	
+	 -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
 
+}
+.recipe-details li:hover{
+	background-color: #999a9b;
+  cursor: pointer;
 }
 
 

@@ -191,20 +191,23 @@ body {
 	margin-bottom: 2rem;
 	min-height: 20rem;
 	position: relative;
- 
+   -webkit-transition: background-color 2s ease-out;
+   -moz-transition: background-color 2s ease-out;
+   -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
 	
 }
 .recipe-details li:hover{
-	-moz-box-shadow: 0 0 10px black;
-	-webkit-box-shadow: 0 0 10px ghostwhite;
-	box-shadow: 0 0 10px ghostwhite;
+   -moz-box-shadow: 0 0 10px black;
+	background-color: #414242;
+    cursor: pointer;
 }
 
 .recipe-details li .add-product-to-favorites {
     position: absolute;
     top: 0;
     left: 0;
-        margin-top: 3px;
+    margin-top: 3px;
     margin-left: 3px;
 }
 
@@ -240,11 +243,11 @@ body {
 	color: #F6E3CE;
 	
 }
-.recipe-details:hover .recipe-description:hover {
-	-moz-box-shadow: 0 0 10px gray;
-	-webkit-box-shadow: 0 0 10px gray;
-	box-shadow: 0 0 10px gray;
-}
+/*.recipe-details:hover .recipe-description:hover {*/
+/*	-moz-box-shadow: 0 0 10px gray;*/
+/*	-webkit-box-shadow: 0 0 10px gray;*/
+/*	box-shadow: 0 0 10px gray;*/
+/*}*/
 
 .recipe-details p {
 	margin: 1rem;
