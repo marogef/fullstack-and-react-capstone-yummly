@@ -53,6 +53,7 @@ function getRecipesFromBackend(keyword, cuisine) {
                 output += '<div class="add-product-to-favorites">';
 
                 output += '<input type="hidden" value="' + matches.sourceDisplayName + '">';
+
                 output += '<button class="favorites"><img src="assets/images/add-to-favorites.png"></button>';
                 output += '<button class=""><img src="assets/images/yummly.png"></button>';
                 output += '</div>';
@@ -82,9 +83,14 @@ function getRecipesFromBackend(keyword, cuisine) {
 
 //clicking the favorites to add the recipe 
 $(document).on('click', ".favorites", function(key) {
-    var favoriteRecipeName = $(this).closest('li').find('input').val();
+    // var favoriteRecipeName = $(this).closest('li').find('input').val();
+        var favoriteRecipeURL = $(this).closest('li').data('url')
+
+
     // console.log(favoriteRecipeName);
-    addFavoriteRecipe(favoriteRecipeName);
+    // addFavoriteRecipe(favoriteRecipeName);
+        addFavoriteRecipe(favoriteRecipeURL);
+
 });
 
 //clicking the favorites to delete the favorites 
@@ -105,12 +111,14 @@ function getResults(query) {
 
 
 //function to add items 
-function addFavoriteRecipe(favoriteRecipeName) {
+// function addFavoriteRecipe(favoriteRecipeName) {
+function addFavoriteRecipe(favoriteRecipeURL) {
 
     // console.log(favoriteRecipeName);
 
     var favoriteRecipe = {
-        recipeName: favoriteRecipeName
+        // recipeName: favoriteRecipeName
+        recipeName: favoriteRecipeURL
     };
 
     $.ajax({
@@ -164,8 +172,13 @@ function getFavoriteRecipes() {
 
             var buildTheHtmlOutput = "";
 
-            $.each(recipes, function(recipesKey, recipesValue) {
-                buildTheHtmlOutput += "<li>" + recipesValue.name + "</li>";
+            // $.each(recipes, function(recipesKey, recipesValue) {
+            $.each(recipes, function(recipesKey, recipeURL) {
+
+                // buildTheHtmlOutput += "<li>" + recipesValue.name + "</li>";
+                // buildTheHtmlOutput += "<li>" + recipeURL + "</li>";
+
+                
             });
 
             //use the HTML output to show it in the index.html

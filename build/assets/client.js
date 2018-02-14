@@ -59,7 +59,8 @@ function getRecipesFromBackend(keyword, cuisine) {
                 output += '</div>';
                 output += '<div class="recipe-description">';
                 output += '<p>' + matches.sourceDisplayName + '</p>';
-                output += '<p><a target="_blank" href=https://www.yummly.com/recipe/' + matches.id + ' >' + matches.recipeName + '</a></p>';
+                output += '<div class="linking">';
+                output += '<p><a target="_blank" class ="linking" href=https://www.yummly.com/recipe/' + matches.id + ' >' + matches.recipeName + '</a></p>';
                 output += '<p>Cooking time: ' + matches.totalTimeInSeconds / 60 + ' minutes</p>';
                 output += '<p>Rating: ' + matches.rating + '</p>';
                 output += '</div>';
@@ -77,12 +78,18 @@ function getRecipesFromBackend(keyword, cuisine) {
         });
 }
 
+
+
 //clicking the favorites to add the recipe 
-$(document).on('click', ".favorites", function(key) {
-    var favoriteRecipeName = $(this).closest('li').find('input').val();
+$(document).on('click',".favorites", function(key) {
+
+   var favoriteRecipeURL = document.querySelector("a").href;
     // console.log(favoriteRecipeName);
-    addFavoriteRecipe(favoriteRecipeName);
+    // addFavoriteRecipe(favoriteRecipeName);
+        addFavoriteRecipe(favoriteRecipeURL);
+
 });
+
 
 //clicking the favorites to delete the favorites 
 $(document).on('click', ".delete-favorites", function(key) {
@@ -152,7 +159,8 @@ function getFavoriteRecipes() {
             var buildTheHtmlOutput = "";
 
             $.each(recipes, function(recipesKey, recipesValue) {
-                buildTheHtmlOutput += "<li>" + recipesValue.name + "</li>";
+                // buildTheHtmlOutput += "<li>" + recipesValue.name + "</li>";
+                   buildTheHtmlOutput += "<li>" + recipesValue.name + "</li>";
             });
 
             //use the HTML output to show it in the index.html

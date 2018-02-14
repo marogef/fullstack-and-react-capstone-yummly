@@ -102,6 +102,7 @@ app.get('/recipe/:keyword/:cuisine', function(request, response) {
 //make the post call
 app.post('/favorite-recipes', function(req, res) {
     Recipe.create({
+        // name: req.body.recipeName
         name: req.body.recipeName
     }, function(err, recipes) {
         if (err) {
