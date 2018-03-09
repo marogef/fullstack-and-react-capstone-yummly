@@ -3,7 +3,6 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 //declar function for recipelist and return the right output
 var recipeList = function() {
-    
     return (
     	<section className="recipe-list">
 			<ul className="recipe-details">
