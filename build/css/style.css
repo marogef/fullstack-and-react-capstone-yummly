@@ -52,21 +52,12 @@ body {
 
 .heading .favorites-container {
     background-image: url("../assets/images/transparent.jpg");
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    width: 20%;
     color: white;
-    /* text-align: left; */
-    font-size: 10px;
-    z-index: 1000;
-    border: 2px gray solid;
-    border-radius: 7px;
+    font-size: 19px;
     padding: 10px;
     text-align: center;
-    max-height: 150px;
     min-width: 150px;
-    overflow-y: auto;
+    background-color: gold;
 }
 .heading .favorites-container ul {
     list-style-type: decimal;
@@ -91,12 +82,12 @@ body {
      margin: 0;
      width: 14px;
      height: 14px;
+
 }
 .heading .favorites-container .delete-favorites img{
-    max-width: 100%;
-    height: auto;
-     padding:0; 
-     margin: 0; 
+    width: 42px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -240,6 +231,11 @@ body {
 	/*margin: 3rem 0;*/
 	color: #F6E3CE;
 	
+}
+.favorite-links{
+	font-size: 19px;
+	color: cornflowerblue;
+	padding-bottom: 3px;
 }
 /*.recipe-details:hover .recipe-description:hover {*/
 /*	-moz-box-shadow: 0 0 10px gray;*/

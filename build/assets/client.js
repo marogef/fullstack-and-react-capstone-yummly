@@ -87,16 +87,18 @@ function getRecipesFromBackend(keyword, cuisine) {
 // $(document).on('click',".favorites", function(key) {
  $(document).on('click',".favorites", function(key) {
     //  addFavoriteRecipe($(this).attr('href'));
-        
+         if(!$(this).hasClass('visited'))
+    {
+        $(this).addClass('visited');
         addFavoriteRecipe($(this).parents('li').find('.linking').attr('href'));
         // addFavoriteRecipe(favoriteRecipeURL);
           return true;
 
-// }
-// else
-//     {
-//         return false;
-//     }
+}
+else
+    {
+        return false;
+    }
 
 
 });
