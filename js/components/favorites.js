@@ -12,7 +12,6 @@ var Favorites = function() {
 				</div>
 				<h2>Your Favorites</h2>
 				<ul>
-
 				</ul>
 			</section>
     );

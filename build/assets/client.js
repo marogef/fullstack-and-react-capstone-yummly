@@ -45,7 +45,7 @@ function getRecipesFromBackend(keyword, cuisine) {
 
 
             $('.recipe-details').html('');
-            $.each(result.matches, function(i, matches) {
+            $.each(result.matches, function(index, matches) {
                 var recipeURL = matches.imageUrlsBySize[90].replace("http:", "https:");
                 
                 var output = '';
@@ -59,8 +59,11 @@ function getRecipesFromBackend(keyword, cuisine) {
                 output += '</div>';
                 output += '<div class="recipe-description">';
                 output += '<p>' + matches.sourceDisplayName + '</p>';
-                output += '<div class="linking">';
-                output += '<p><a target="_blank" class ="linking" href=https://www.yummly.com/recipe/' + matches.id + ' >' + matches.recipeName + '</a></p>';
+                // output += '<div class="linking">';
+                // output += '<p><a target="_blank"  class ="linking" href=https://www.yummly.com/recipe/' + matches.id + ' >' + matches.recipeName + '</a></p>';
+                // output += '<a target="_blank" href=https://www.yummly.com/recipe/' + matches.id + ' >' + matches.recipeName + '</a>';
+                output += '<p><a target="_blank"  class ="linking" href=https://www.yummly.com/recipe/' + matches.id + ' >' + matches.recipeName + '</a></p>';
+
                 output += '<p>Cooking time: ' + matches.totalTimeInSeconds / 60 + ' minutes</p>';
                 output += '<p>Rating: ' + matches.rating + '</p>';
                 output += '</div>';
@@ -81,23 +84,23 @@ function getRecipesFromBackend(keyword, cuisine) {
 
 
 //clicking the favorites to add the recipe 
-$(document).on('click',".favorites", function(key) {
-    
-     if(!$(this).hasClass('visited'))
-    {
-        $(this).addClass('visited');
-      
-   var favoriteRecipeURL = document.querySelector("a").href;
-
-        addFavoriteRecipe(favoriteRecipeURL);
+// $(document).on('click',".favorites", function(key) {
+ $(document).on('click',".favorites", function(key) {
+    //  addFavoriteRecipe($(this).attr('href'));
+        
+        addFavoriteRecipe($(this).parents('li').find('.linking').attr('href'));
+        // addFavoriteRecipe(favoriteRecipeURL);
           return true;
-}
-else
-    {
-        return false;
-    }
+
+// }
+// else
+//     {
+//         return false;
+//     }
+
 
 });
+
 
 
 //clicking the favorites to delete the favorites 
@@ -118,8 +121,6 @@ function getResults(query) {
 
 //function to add items 
 function addFavoriteRecipe(favoriteRecipeName) {
-
-    // console.log(favoriteRecipeName);
 
     var favoriteRecipe = {
         recipeName: favoriteRecipeName
@@ -168,8 +169,8 @@ function getFavoriteRecipes() {
             var buildTheHtmlOutput = "";
 
             $.each(recipes, function(recipesKey, recipesValue) {
-                // buildTheHtmlOutput += "<li>" + recipesValue.name + "</li>";
-                   buildTheHtmlOutput += "<li>" + recipesValue.name + "</li>";
+                buildTheHtmlOutput += '<li><a href=recipesValue.name' + ' >' + recipesValue.name + '</a></li>';
+
             });
 
             //use the HTML output to show it in the index.html
@@ -180,41 +181,6 @@ function getFavoriteRecipes() {
                 .fail(ifResultsFail);
 }
 
-//function for showing results
-function resultsIntoListItem(output, recipe) {
-    var isSale;
-    output += '<li>';
-    output += '<div class="recipe-container">';
-    output += '<div class="title-wrapper"><h3 class="clamp-this">' + sanitizeJSON(recipe.name) + '</h3></div>';
-    output += '<img src="' + recipe.image + '">';
-    output += '<div class = "recipe-details">';
-    if (recipe.customerReviewCount != null) {
-        output += '<p class="review-num">' + recipe.customerReviewCount + ' Reviews</p>';
-    }
-    if (recipe.customerReviewAverage != null) {
-        output += '<p class="star-avg">' + recipe.customerReviewAverage + ' Stars</p>';
-    }
-
-    if ((recipe.salePrice < recipe.regularPrice) && (recipe.salePrice != null)) {
-        output += '<p class="reg-price strikethrough">$' + recipe.regularPrice + '</p>';
-        output += '<p class="sale-price highlight">Sale: $' + recipe.salePrice + '</p>';
-        isSale = true;
-    }
-    else {
-        output += '<p class="reg-price strong no-sale">$' + recipe.regularPrice + '</p>';
-        isSale = false;
-    }
-    output += '</div>';
-    if (isSale == false) {
-        output += '<a href="' + recipe.addToCartUrl + '" class="add-to-cart">Add to Cart</a>';
-    }
-    else {
-        output += '<a href="' + recipe.addToCartUrl + '" class="add-to-cart sale-button">Add to Cart</a>';
-    }
-    output += '</div>';
-    output += '</li>';
-    return output;
-}
 //function to display results of list items
 function resultsIntoListItem(output, recipe) {
     var isSale;
